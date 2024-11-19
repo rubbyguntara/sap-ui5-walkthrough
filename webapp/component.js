@@ -7,14 +7,20 @@ sap.ui.define([
  
     return UIComponent.extend("ui5.walkthrough.Component", {
         
-        metadata : {
-            "interfaces": ["sap.ui.core.IAsyncContentCreation"],
-            "rootView": {
-               "viewName": "ui5.walkthrough.view.App",
-               "type": "XML",
-               "id": "app"
-            }
-         },
+      //   metadata : {
+      //       "interfaces": ["sap.ui.core.IAsyncContentCreation"],
+      //       "rootView": {
+      //          "viewName": "ui5.walkthrough.view.App",
+      //          "type": "XML",
+      //          "id": "app"
+      //       }
+      //    },
+
+      metadata : {
+         interfaces: ["sap.ui.core.IAsyncContentCreation"],
+         manifest: "json"
+      },
+      
        init() {
           // call the init function of the parent
           UIComponent.prototype.init.apply(this, arguments);
