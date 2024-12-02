@@ -8,7 +8,16 @@
     "type": "application",
     "applicationVersion": {
       "version": "1.0.0"
-    }
+    },
+    "dataSources": {
+			"invoiceRemote": {
+				"uri": "V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
   },
   "sap.ui": {
     "technology": "UI5",
@@ -34,12 +43,22 @@
         "supportedLocales": [""],
         "fallbackLocale": ""
       }
-	  }
+	  },
+    "invoice": {
+        "dataSource": "invoiceRemote"
+      }
 	},
 	"rootView": {
       "viewName": "ui5.walkthrough.view.App",
       "type": "XML",
       "id": "app"
-    }
+    },
+    "resources": {
+      "css": [
+      {
+        "uri": "css/style.css"
+      }
+      ]
+	  }
   }
 }
